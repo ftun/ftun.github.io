@@ -1,0 +1,66 @@
+[
+    {
+        "date": "Diciembre 2021 - Actualmente",
+        "job": "Desarrollador Frontend Sr.",
+        "company": "AgileThought",
+        "description": "Desarrollo web de módulos para la automatización en la apertura de cuentas de nomina y desarrollo de nuevas funcionalidades y corrección de incidencias en la app móvil de unos de los principales bancos de Canadá.",
+        "technologies": [
+            "JavaScript",
+            "TypeScript",
+            "ReactJS",
+            "Redux",
+            "Redux-Saga",
+            "Single-SPA",
+            "Web-Components",
+            "Jest",
+            "Micro-Fronted",
+            "Android",
+            "Kotlin",
+            "Scrum"
+        ]
+    },
+    {
+        "date": "Octubre 2020 - Noviembre 2021",
+        "job": "Líder de Desarrollo.",
+        "company": "Palace Resorts",
+        "description": "Instruyendo a equipos en el desarrollo de aplicaciones web: la automatización de generación de contratos en la venta de habitaciones de grupos y convenciones, sistema de inventarios para la casa productora de eventos e integración de módulos en el CRM de una de las principales cadenas hoteleras de Mexico.",
+        "technologies": [
+            "AWS",
+            "PHP",
+            "Phalcon PHP",
+            "JavaScript",
+            "Storybook",
+            "LernaJS",
+            "Webpack",
+            "BabelJS",
+            "Materialize",
+            "MySql",
+            "ReactJS",
+            "Node",
+            "Express",
+            "Scrum",
+            "Kanban"
+        ]
+    },
+    {
+        "date": "Enero 2016 - Octubre 2020",
+        "job": "Analista Programador.",
+        "company": "Palace Resorts",
+        "description": "Desarrollo de un sistema para el cálculo de comisiones y pago de nóminas de los vendedores del club vacacional y migración de módulos de descuentos e integración con el sistema de comisiones.",
+        "technologies": [
+            "AWS",
+            "PHP",
+            "Yii",
+            "Yii2",
+            "JavaScript",
+            "JQuery",
+            "Boostrap",
+            "MSSQL",
+            "MySql",
+            "Store-Procedures",
+            "ReactJs",
+            "Node",
+            "MVC"
+        ]
+    }
+]

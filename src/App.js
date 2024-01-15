@@ -6,7 +6,7 @@ import Experience from "./components/experience"
 function App() {
 	return <>
 		<About />
-		{/* <Experience /> */}
+		<Experience />
 	</>
 }
 

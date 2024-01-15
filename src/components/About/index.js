@@ -1,23 +1,26 @@
 import imgMe from "../../assets/me.jpeg"
 import { Section } from "../Section"
+import data from "./data.json"
+
 
 const Index = () =>
     <Section>
-        <div className="text-center">
-
-            <div className="flex justify-center mb-16">
-                <img src={imgMe} alt="Image" className='h-40 w-40 md:w-48 md:h-auto rounded-full mx-auto' />
+        <div className="flex flex-wrap -mx-4 -mb-10 text-center">
+            <div className="sm:w-full mb-10 px-4">
+                <div className="rounded-lg">
+                    <img src={imgMe} className='h-40 w-40 md:w-48 md:h-auto img-profile-animation mx-auto bg-cover bg-no-repeat' />
+                </div>
+                <h2 className="title-font text-xl font-medium text-gray-900 mt-6 mb-3">
+                    {data.name}
+                </h2>
+                <h6 className="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">
+                    {data.title}
+                </h6>
+                <p className="leading-relaxed text-base">
+                    {data.description}
+                </p>
+                {/* <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">Contactame</button> */}
             </div>
-
-            <h6 className="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8">Felipe Tun</h6>
-
-            <h1 className="font-normal text-gray-900 text-4xl md:text-4xl leading-none mb-8">Desarrollador Frontend Sr.</h1>
-
-            <p className="font-normal text-gray-600 text-md md:text-xl mb-16">Tengo 8 años de experiencia en el desarrollo y mantenimiento de software,
-                con herramientas y metodologías agiles Apasionado por el mundo de la programación, me gusta
-                aplicar mis conocimientos y experiencia para ayudar en soluciones a problemas aparentemente
-                complejos
-            </p>
         </div>
     </Section>
     

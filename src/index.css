@@ -2,3 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+
+}
+
+@layer components {
+    /* apply */
+    .img-profile-animation {
+        @apply rounded-full transition hover:scale-105
+    }
+}
+
+@layer utilities {
+
+}
+
