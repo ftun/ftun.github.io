@@ -3,8 +3,8 @@ import data from "./data.json"
 
 const Index = () => 
     <Section>
-        <h1 className="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Experiencia</h1>
-        <div className="-my-8 divide-y-2 divide-gray-100">
+        <h1 className="font-medium text-gray-700 text-3xl md:text-4xl mb-10">Experiencia</h1>
+        <div className="-my-8 divide-y-2 divide-gray-200">
             {data.map((item, i) => <Item key={i} {...item} />)}
         </div>
     </Section>

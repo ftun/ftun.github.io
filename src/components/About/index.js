@@ -1,4 +1,5 @@
 import imgMe from "../../assets/me.jpeg"
+import { SvgIcon } from "../Icons"
 import { Section } from "../Section"
 import data from "./data.json"
 
@@ -21,6 +22,11 @@ const Index = () =>
                 </p>
                 {/* <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">Contactame</button> */}
             </div>
+        </div>
+        <div className="w-full h-auto py-8 flex items-center justify-center gap-2 flex-wrap">
+            <SvgIcon type="whatsappIcon" link="https://api.whatsapp.com/send?phone=529961025585"/>
+            <SvgIcon type="linkedinIcon" link="https://www.linkedin.com/in/felipe-tun-cauich/" />
+            {/* <SvgIcon type="mailIcon" /> */}
         </div>
     </Section>
     

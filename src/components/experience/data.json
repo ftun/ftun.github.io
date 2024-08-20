@@ -3,19 +3,27 @@
         "date": "Diciembre 2021 - Actualmente",
         "job": "Desarrollador Frontend Sr.",
         "company": "AgileThought",
-        "description": "Desarrollo web de módulos para la automatización en la apertura de cuentas de nomina y desarrollo de nuevas funcionalidades y corrección de incidencias en la app móvil de unos de los principales bancos de Canadá.",
+        "description": "Desarrollo web y móvil para unos de los principales bancos de Canadá. Desarrollo módulos web para aperturas de nómina n2 y n4. Dashboard para visualización y administración de cuentas para ejecutivos y gerentes. Implementación de estrategias para seguridad y prevención de fraudes. Desarrollo de nuevas funcionalidades y módulos en la aplicación bancaria.",
         "technologies": [
             "JavaScript",
             "TypeScript",
             "ReactJS",
             "Redux",
             "Redux-Saga",
+            "Nodejs",
+            "Webpack",
             "Single-SPA",
             "Web-Components",
             "Jest",
             "Micro-Fronted",
             "Android",
             "Kotlin",
+            "Koin",
+            "Retrofit",
+            "MVVM",
+            "Jira",
+            "Git",
+            "Jenkins",
             "Scrum"
         ]
     },
@@ -23,12 +31,14 @@
         "date": "Octubre 2020 - Noviembre 2021",
         "job": "Líder de Desarrollo.",
         "company": "Palace Resorts",
-        "description": "Instruyendo a equipos en el desarrollo de aplicaciones web: la automatización de generación de contratos en la venta de habitaciones de grupos y convenciones, sistema de inventarios para la casa productora de eventos e integración de módulos en el CRM de una de las principales cadenas hoteleras de Mexico.",
+        "description": "Sistema para generación de contratos de grupos y convenciones con conexión al PMS y CRM hotelero para la carga de información. Modulo para la firma de los contratos mediante firma electrónica vía link con tiempo de vigencia. Sistema de administración de eventos y bodas para la casa productora, gestión y control de inventarios. Landing page para clientes, para visualización de los catálogos de la casa productora. Link de pagos con tarjetas para el cobro de los eventos y artículos con conexión al PMS para el registro de las transacciones. Creación y publicación de librería de componentes para los sistemas de la cadena hotelera.",
         "technologies": [
             "AWS",
             "PHP",
-            "Phalcon PHP",
             "JavaScript",
+            "Phalcon PHP",
+            "Micro-servicios",
+            "API Rest",
             "Storybook",
             "LernaJS",
             "Webpack",
@@ -36,17 +46,18 @@
             "Materialize",
             "MySql",
             "ReactJS",
-            "Node",
+            "Nodejs",
             "Express",
-            "Scrum",
-            "Kanban"
+            "Git",
+            "Jira",
+            "Scrum"
         ]
     },
     {
         "date": "Enero 2016 - Octubre 2020",
-        "job": "Analista Programador.",
+        "job": "Desarrollador web.",
         "company": "Palace Resorts",
-        "description": "Desarrollo de un sistema para el cálculo de comisiones y pago de nóminas de los vendedores del club vacacional y migración de módulos de descuentos e integración con el sistema de comisiones.",
+        "description": "Desarrollo de sistema para el cálculo de comisiones y pagos de nóminas de vendedores del club vacacional con conexión a PeopleSoft para él envió de la información de nóminas. Desarrollo módulo de descuentos y cancelación de comisiones con integración al sistema de comisiones.",
         "technologies": [
             "AWS",
             "PHP",
@@ -54,13 +65,15 @@
             "Yii2",
             "JavaScript",
             "JQuery",
-            "Boostrap",
+            "Bootstrap",
             "MSSQL",
             "MySql",
             "Store-Procedures",
             "ReactJs",
             "Node",
-            "MVC"
+            "MVC",
+            "API Rest",
+            "Git"
         ]
     }
 ]
