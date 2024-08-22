@@ -1,13 +1,12 @@
 import './App.css';
 
-import About from "./components/About"
-import Experience from "./components/experience"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import views from "./views"
+
+const router = createBrowserRouter(views)
 
 function App() {
-	return <>
-		<About />
-		<Experience />
-	</>
+	return <RouterProvider router={router} />
 }
 
 export default App;

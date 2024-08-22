@@ -1,13 +1,18 @@
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { Section } from "../Section";
-import data from "./data.json"
 
-const Index = () => 
-    <Section>
+const Index = () => {
+    const experience = useSelector(state => state.profile.data.experience);
+
+    return <Section>
         <h1 className="font-medium text-gray-700 text-3xl md:text-4xl mb-10">Experiencia</h1>
         <div className="-my-8 divide-y-2 divide-gray-200">
-            {data.map((item, i) => <Item key={i} {...item} />)}
+            {experience.map((item, i) => <Item key={i} {...item} />)}
         </div>
     </Section>
+}
+    
 
 const Item = ({ date, job, company, description, technologies }) => <div className="py-8 flex flex-wrap md:flex-nowrap">
     <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
