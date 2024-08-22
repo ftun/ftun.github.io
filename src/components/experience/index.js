@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Section } from "../Section";
+import { Section } from "../section";
 
 const Index = () => {
     const experience = useSelector(state => state.profile.data.experience);
