@@ -17,11 +17,12 @@ const SvgIcon = ({ type, link }) => {
         window.open(link, "_blank")
     }
     
-    return <button onClick={handleOnClick} className="p-2 rounded-lg flex items-center border border-gray-300 justify-center transition-all duration-500 hover:border-gray-100 hover:bg-gray-100">
+    return <button
+        onClick={handleOnClick}
+        className="p-2 rounded-lg flex items-center border bg-gray-800 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+    >
         {IconTypes[type] || null}
     </button> 
 }
 
-export {
-    SvgIcon
-}
+export default SvgIcon

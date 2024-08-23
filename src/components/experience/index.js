@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Section } from "../section";
 
 const Index = () => {
-    const experience = useSelector(state => state.profile.data.experience);
+    const experience = useSelector(state => state.profile.data.experience) || [];
 
     return <Section>
         <h1 className="font-medium text-gray-700 text-3xl md:text-4xl mb-10">Experiencia</h1>
