@@ -8,21 +8,41 @@ const IconTypes = {
     linkedin: <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
         <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
     </svg>,
+    sun: <svg xmlns="http://www.w3.org/2000/svg"  className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M13 3a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0V3ZM6.343 4.929A1 1 0 0 0 4.93 6.343l1.414 1.414a1 1 0 0 0 1.414-1.414L6.343 4.929Zm12.728 1.414a1 1 0 0 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 1.414 1.414l1.414-1.414ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-9 4a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H3Zm16 0a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2ZM7.757 17.657a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414Zm9.9-1.414a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM13 19a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0v-2Z" />
+    </svg>,
+    moon: <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M11.675 2.015a.998.998 0 0 0-.403.011C6.09 2.4 2 6.722 2 12c0 5.523 4.477 10 10 10 4.356 0 8.058-2.784 9.43-6.667a1 1 0 0 0-1.02-1.33c-.08.006-.105.005-.127.005h-.001l-.028-.002A5.227 5.227 0 0 0 20 14a8 8 0 0 1-8-8c0-.952.121-1.752.404-2.558a.996.996 0 0 0 .096-.428V3a1 1 0 0 0-.825-.985Z" />
+    </svg>
 }
 
-const SvgIcon = ({ type, link }) => {
+
+const IconLink = ({ type, link }) => {
 
     const handleOnClick = () => {
         if (!link) return
         window.open(link, "_blank")
     }
     
-    return <button
-        onClick={handleOnClick}
-        className="p-2 rounded-lg flex items-center border bg-gray-800 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-    >
+    return <button onClick={handleOnClick} className={`p-2 rounded-lg flex items-center btn-custom-theme`}>
         {IconTypes[type] || null}
     </button> 
 }
 
-export default SvgIcon
+const IconButton = ({ type, click = () => {} }) => {
+    return <button onClick={click} className={`p-2 rounded-lg flex items-center btn-custom-theme`}>
+        {IconTypes[type] || null}
+    </button>
+}
+
+const Icons = {
+    IconLink,
+    IconButton,
+}
+
+export default Icons
+
+export {
+    IconLink,
+    IconButton,
+}

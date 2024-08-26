@@ -7,15 +7,12 @@ const name = "profile"
 const initialState = {
     status: '',
     data: {},
+    error: {},
 };
 
 export const fecthProfileData = createAsyncThunk(`${name}/fecthProfileData`, async () => {
-    try {
-        const response = await axios.get(`${getUrlApi()}/profile`);
-        return response.data;
-    } catch (error) {
-        return [{}];
-    }
+    const response = await axios.get(`${getUrlApi()}/profile`);
+    return response.data;
 })
 
 export const profileReducer = createSlice({
@@ -27,8 +24,12 @@ export const profileReducer = createSlice({
         .addCase(fecthProfileData.pending, (state) => {
             state.status = 'loading';
         })
+        .addCase(fecthProfileData.rejected, (state, action) => {
+            state.status = 'failed';
+            state.error = action.error
+        })
         .addCase(fecthProfileData.fulfilled, (state, action) => {
-            state.status = 'successfull';
+            state.status = 'successful';
             state.data = action.payload;
         })
     },

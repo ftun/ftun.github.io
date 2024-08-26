@@ -1,22 +1,26 @@
 import React, { useEffect } from 'react';
-import About from "../../components/About"
-import Experience from "../../components/experience"
 import { useSelector, useDispatch } from 'react-redux';
 import { fecthProfileData } from '../../store/reducers/profile';
+
+import imgMe from "../../assets/me.jpeg"
+import About from "../../components/About"
+import Experience from "../../components/experience"
 import Spinner from "../../components/spinner"
 
 const Profile = () => {
-    const dataProfileStatus = useSelector(state => state.profile.status);
     const dispatch = useDispatch();
+    const dataProfile = useSelector(state => state.profile);
+    const isSuccessful = dataProfile.status === "successful"
+    const { name, title, description, experience } = dataProfile.data
 
     useEffect(() => {
         dispatch(fecthProfileData())
     }, [])
 
-    if (dataProfileStatus == "successfull") {
+    if (isSuccessful) {
         return <>
-            <About />
-            <Experience />
+            <About name={name} title={title} description={description} imgSrc={imgMe} />
+            <Experience experience={experience}/>
         </>
     }
         
