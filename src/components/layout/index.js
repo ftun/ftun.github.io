@@ -32,7 +32,7 @@ const Layout = () => {
     const expandedMenuHandler = () => setExpanded(!expanded)
 
     return <>
-        <nav className={`section-layout-theme border-gray-200 `}>
+        <nav className="section-layout-theme">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -71,7 +71,7 @@ const Layout = () => {
                         </div>
                     </div>
                     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                        <IconButton type={darkMode ? "moon" : "sun"} click={changeThemeHandler} />
+                        <IconButton type={darkMode ? "sun" : "moon"} click={changeThemeHandler} />
                     </div>
                 </div>
             </div>
@@ -83,7 +83,9 @@ const Layout = () => {
                 </div>
             </div>
         </nav>
-        <Outlet />
+        <div >
+            <Outlet />
+        </div>
         {socialNetworks.length > 0 && <footer className="section-layout-theme">
             <div className="container px-6 pt-6 mx-auto">
                 <div className="w-full h-auto py-8 flex items-center justify-center gap-2 flex-wrap">
@@ -91,7 +93,7 @@ const Layout = () => {
                 </div>
             </div>
             <div className="p-4 text-center bg-opacity-20">
-                <span className="bg-white dark:bg-gray-800 dark:text-gray-400 dark:hover:text-white dark:focus:outline-none dark:focus:ring-2 dark:focus:ring-white dark:focus:ring-offset-2 dark:focus:ring-offset-gray-800">
+                <span className="dark:bg-gray-800 dark:text-gray-400 dark:hover:text-white dark:focus:outline-none dark:focus:ring-2 dark:focus:ring-white dark:focus:ring-offset-2 dark:focus:ring-offset-gray-800">
                     © {new Date().getFullYear()} Copyright
                 </span>
             </div>

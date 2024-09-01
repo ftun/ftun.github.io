@@ -1,21 +1,35 @@
 import React from 'react';
 import { Section } from "../section"
-import Avatar from '../avatar';
+import Avatar, { AvatarSkeleton } from '../avatar';
+import { SkeletonParagraph } from '../../helpers/skeleton'
 
 const Index = ({ name, title, description, imgSrc }) => {
     return <Section>
-        <div className="flex flex-wrap -mx-4 -mb-10 text-center">
-            <div className="sm:w-full mb-10 px-4">
-                <Avatar 
-                    src={imgSrc}
-                    name={name}
-                    title={title}
-                />
-                <p className="mb-0 mt-0">{description}</p>
-            </div>
-        </div>
+        <Container>
+            {
+                name ? 
+                <>
+                    <Avatar
+                        src={imgSrc}
+                        title={name}
+                        body={title}
+                    />
+                    <p className="mb-0 mt-0 text-justify">{description}</p>
+                </> : <>
+                    <AvatarSkeleton />
+                    <SkeletonParagraph lines={5} />
+                </>
+            }
+        </Container>
     </Section>
 }
-    
+
+const Container = ({ children }) => {
+    return <div className="flex flex-wrap mb-10">
+        <div className="sm:w-full mb-10 px-4">
+            {children}
+        </div>
+    </div>
+}    
 
 export default Index
