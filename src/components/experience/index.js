@@ -5,7 +5,7 @@ import { SkeletonLine } from '../../helpers/skeleton';
 const Index = ({ experience = [] }) => {
     return <Section>
         {
-            experience.length == 0 ?
+            experience.length === 0 ?
                 <Skeleton />
                 :
                 <>
@@ -25,7 +25,7 @@ const Item = ({ date, job, company, description, technologies }) => <div classNa
     </div>
     <div className="md:flex-grow">
         <h2 className="text-2xl font-medium title-font mb-2">{job}</h2>
-        <p className="leading-relaxed">{description}</p>
+        <p className="text-justify">{description}</p>
         <div className="flex-row flex-wrap justify-center items-center mt-4">
             {technologies.map((t, i) => 
                 <span key={i} className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 m-1">{t}</span>
@@ -61,24 +61,19 @@ const SkeletonItem = () => {
                 <SkeletonLine className="ml-0" />
             </div>
             <div className="flex-row flex-wrap justify-center items-center mt-4">
-                <SkeletonLine className="ml-0 mb-0 m-1 inline-flex items-center px-5 py-1" />
-                <SkeletonLine className="ml-0 mb-0 m-1 inline-flex items-center px-5 py-1 " />
-                <SkeletonLine className="ml-0 mb-0 m-1 inline-flex items-center px-5 py-1 " />
-                <SkeletonLine className="ml-0 mb-0 m-1 inline-flex items-center px-5 py-1 " />
-                <SkeletonLine className="ml-0 mb-0 m-1 inline-flex items-center px-5 py-1 " />
-                <SkeletonLine className="ml-0 mb-0 m-1 inline-flex items-center px-5 py-1 " />
-                <SkeletonLine className="ml-0 mb-0 m-1 inline-flex items-center px-5 py-1 " />
-                <SkeletonLine className="ml-0 mb-0 m-1 inline-flex items-center px-5 py-1 " />
-                <SkeletonLine className="ml-0 mb-0 m-1 inline-flex items-center px-5 py-1 " />
-                <SkeletonLine className="ml-0 mb-0 m-1 inline-flex items-center px-5 py-1 " />
-                <SkeletonLine className="ml-0 mb-0 m-1 inline-flex items-center px-5 py-1 " />
-                <SkeletonLine className="ml-0 mb-0 m-1 inline-flex items-center px-5 py-1 " />
-                <SkeletonLine className="ml-0 mb-0 m-1 inline-flex items-center px-5 py-1 " />
-                <SkeletonLine className="ml-0 mb-0 m-1 inline-flex items-center px-5 py-1 " />
-                <SkeletonLine className="ml-0 mb-0 m-1 inline-flex items-center px-5 py-1 " />
+                <SkeletonTechnologies />
             </div>
         </div>
     </div>
+}
+
+const SkeletonTechnologies = () => {
+    let lines = []
+    for (let index = 0; index < 15; index++) {
+        lines.push(<SkeletonLine key={index} className="ml-0 mb-0 m-1 inline-flex items-center px-5 py-1 " />)        
+    }
+
+    return lines
 }
 
 export default Index
